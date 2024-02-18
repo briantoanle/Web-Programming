@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+        
+        <title>
+            Section 3 Exercise
+        </title>
+        
+        <style>
+            .cell{
+                border: 1px solid black;
+            }
+            #leftside{
+                padding:10px;
+            }
+            #header-image {
+                width: 1500px;
+                height: 100px;
+            }
+            #leftSide{
+                background: lightblue;
+            }
+            #footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#alert").on("click",createAlert);
+                $("#changeText").on("click", changeTextBox);
+                function createAlert() {
+                    alert("Hello, you clicked the button");
+                    
+                }
+                function changeTextBox() {
+                    $("#body").html("New text updated")
+                }
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div id = entire>
+            <div class="grid-x">
+                <div id="header" class = "cell small-12 medium-12 large-12 text-right">
+                    <button id = changeText class = "button nav"> Update Body</button>
+                    <button id = alert class = "button nav"> Alert</button>
+                
+                </div>
+            </div>
+
+            <div class="grid-x">
+                <div id="image" class="bodyStyle">
+                    <img id="header-image" src="https://images.freeimages.com/variants/k1wQB7egQotJ7Hr3ZBPP1S5c/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&h=350" alt="Header Image">
+                </div>
+            </div>
+            <div class = "grid-x">
+                <div id="leftSide" class = "cell small-12 medium-4 large-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Morbi posuere, mauris quis ullamcorper vestibulum, nunc velit tincidunt tellus, at condimentum elit diam et nunc. 
+                    Vivamus tristique enim eu fringilla pellentesque. 
+                    Donec lobortis porttitor sem ac hendrerit. 
+                    Donec consectetur enim vitae iaculis blandit.
+                </div>
+                
+                <div id="body" class = "cell small-12 medium-8 large-8">
+                    Content page 1
+                </div>
+            </div>
+            
+            <div class = "grid-x cell" id="footer">
+
+                <p class="leftsidefooter">&#169; 2021 Toan Le, All Rights Reserved</p>
+                <p class="rightsidefooter">Design by Toan Le</p>
+            </div>
+
+            
+        </div>
+        
+        
+    </body>
+</html>

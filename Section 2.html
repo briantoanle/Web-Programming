@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Section 2 Exercise
+        </title>
+        
+        <style>
+            .bodyStyle {
+                border: 1px solid black;
+                height: 100px;
+                width: 900px;
+            }
+            #header{
+                text-align: right;
+                font-size: small;
+                height: 50px;
+                width: 900px;
+                border: 1px solid black;
+            }
+            #header-image{
+                border: 1px solid black;
+                width: 900px;
+                height: 100px;
+            }
+            #left{
+                background: lightblue;
+                width: 300px;
+                height: 500px;
+                float: left
+            }
+            #right{
+                width:900px;
+                height:500px;
+            }
+            #footer{
+                text-align: left;
+                border: 1px solid black;
+                width: 900px;
+                height: 50px;
+                float:left 
+            }
+            .leftsidefooter{
+                float:left;
+            }
+            .rightsidefooter{
+                float:right;
+            }
+        </style>
+        <script>
+            function createAlert() {
+                alert("Hello, you clicked the button");
+                return (false);
+            }
+            function changeTextBox() {
+                var textBox = document.getElementById("bodyParagraph");
+                textBox.innerHTML = "Text changed on click!";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="header" class="header">
+            <h1 class="header"><a onclick="changeTextBox();return false;">Update Body</a>
+                <a>|</a>
+                <a onclick="createAlert();return false;">Alert</a></h1>
+        </div>
+        <div id="image" class="bodyStyle">
+            <img id="header-image" src="https://images.freeimages.com/variants/k1wQB7egQotJ7Hr3ZBPP1S5c/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&h=350" alt="Header Image">
+        </div>
+        <div id="left" class="bodyStyle around">
+            <p id="bodyParagraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Morbi posuere, mauris quis ullamcorper vestibulum, nunc velit tincidunt tellus, at condimentum elit diam et nunc. 
+                Vivamus tristique enim eu fringilla pellentesque. 
+                Donec lobortis porttitor sem ac hendrerit. 
+                Donec consectetur enim vitae iaculis blandit.
+            </p>
+        </div>
+        <div id="right" class="bodyStyle around">
+            <p>
+                Content Page 1
+            </p>
+        </div>
+        <div id="footer">
+            <p class="leftsidefooter">&#169; 2021 Toan Le, All Rights Reserved</p>
+            <p class="rightsidefooter">Design by Toan Le</p>
+        </div>
+    </body>
+</html>
